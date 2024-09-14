@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahzun Travels</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="brand">
+            Mahzun Travels
+        </a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Aligned Currency Selector Box outside content sections -->
+    <div class="currency-selector-box">
+        <label for="currency">Select Currency:</label>
+        <select id="currency" onchange="changeCurrency()">
+            <option value="aed">AED</option>
+            <option value="inr">Rupees</option>
+            <option value="usd">US Dollars</option>
+        </select>
+    </div>
+
+    <section id="visa" class="section">
+        <h2>Tourist Visa</h2>
+        <div class="visa-options">
+            <div class="visa-box">
+                <h3>30 Days Visa</h3>
+            </div>
+            <div class="visa-box">
+                <h3>60 Days Visa</h3>
+            </div>
+            <div class="visa-box">
+                <h3>90 Days Visa</h3>
+            </div>
+        </div>
+        <div class="visa-info">
+            <p>Visa change by bus available</p>
+            <p>AZA available for visa change (FlyDubai, Kish Air, Qeshm Air)</p>
+        </div>
+    </section>
+
+    <section id="tickets" class="section">
+        <h2>Tickets for All Dubai Attractions</h2>
+        <div class="ticket-options">
+            <div class="ticket-box">
+                <h3>Desert Safari</h3>
+                <p class="price" data-aed="199" data-inr="3980" data-usd="54">
+                    <span class="original-price">199 AED</span>
+                    <span class="discounted-price">99 AED</span>
+                </p>
+            </div>
+            <div class="ticket-box">
+                <h3>Air Tickets</h3>
+                <p class="price" data-aed="1200" data-inr="24000" data-usd="327">
+                    <span class="original-price">1200 AED</span>
+                    <span class="discounted-price">1000 AED</span>
+                </p>
+            </div>
+            <div class="ticket-box">
+                <h3>Global Visa Assistance</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="tours" class="section">
+        <h2>City Tours</h2>
+        <div class="tour-options">
+            <div class="tour-box">
+                <h3>Dubai City Tour</h3>
+                <p class="price" data-aed="299" data-inr="5980" data-usd="82">
+                    <span class="original-price">299 AED</span>
+                    <span class="discounted-price">199 AED</span>
+                </p>
+            </div>
+            <div class="tour-box">
+                <h3>Abu Dhabi City Tour</h3>
+                <p class="price" data-aed="349" data-inr="6980" data-usd="95">
+                    <span class="original-price">349 AED</span>
+                    <span class="discounted-price">249 AED</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="social-icons">
+            <a href="https://www.instagram.com"><img src="assets/media/insta.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com"><img src="assets/media/fb.png" alt="Facebook"></a>
+        </div>
+        <p><a href="#about">About Us</a> | <a href="#contact">Contact Us</a></p>
+        <p>&copy; 2024 Mahzun Travels. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function changeCurrency() {
+            const currency = document.getElementById('currency').value;
+            const prices = document.querySelectorAll('.price');
+
+            prices.forEach(price => {
+                const originalPriceElement = price.querySelector('.original-price');
+                const discountedPriceElement = price.querySelector('.discounted-price');
+                const aed = price.getAttribute('data-aed');
+                const inr = price.getAttribute('data-inr');
+                const usd = price.getAttribute('data-usd');
+
+                let originalPrice, discountedPrice;
+
+                switch (currency) {
+                    case 'aed':
+                        originalPrice = aed;
+                        discountedPrice = Math.floor(aed * 0.5); // Assuming 50% discount
+                        originalPriceElement.textContent = `${originalPrice} AED`;
+                        discountedPriceElement.textContent = `${discountedPrice} AED`;
+                        break;
+                    case 'inr':
+                        originalPrice = inr;
+                        discountedPrice = Math.floor(inr * 0.5);
+                        originalPriceElement.textContent = `₹${originalPrice}`;
+                        discountedPriceElement.textContent = `₹${discountedPrice}`;
+                        break;
+                    case 'usd':
+                        originalPrice = usd;
+                        discountedPrice = (usd * 0.5).toFixed(2);
+                        originalPriceElement.textContent = `$${originalPrice}`;
+                        discountedPriceElement.textContent = `$${discountedPrice}`;
+                        break;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

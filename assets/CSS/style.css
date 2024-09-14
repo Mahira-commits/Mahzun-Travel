@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../media/view.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    padding: 14px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Currency Selector Styling */
+.currency-selector-box {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.currency-selector-box label {
+    color: black;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.currency-selector-box select {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+.section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    position: relative;
+}
+
+.section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.visa-options,
+.ticket-options,
+.tour-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.visa-box,
+.ticket-box,
+.tour-box {
+    background-color: rgba(240, 240, 240, 0.95);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.visa-box:hover,
+.ticket-box:hover,
+.tour-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.visa-box h3,
+.ticket-box h3,
+.tour-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+    background-color: rgba(240, 240, 240, 0.95);
+    padding: 0 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 8px 8px;
+    text-align: center;
+}
+
+.dropdown-content.open {
+    max-height: 200px; /* Adjust based on content */
+}
+
+.discounted-price {
+    color: #ff4500;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Footer styling */
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Reduced the bottom margin */
+}
+
+.footer .social-icons img {
+    height: 40px;
+    margin: 0 10px; /* Reduced space between icons */
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.footer p {
+    margin: 5px 0; /* Reduced line spacing */
+    font-size: 18px;
+}
+
+.visa-info {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.4; /* Reduced line spacing */
+}
