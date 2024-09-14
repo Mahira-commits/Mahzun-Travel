@@ -7,133 +7,245 @@
     <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar">
-        <a href="#" class="brand">
-            Mahzun Travels
-        </a>
+        <div class="brand-container">
+            <a href="index.html">
+                <img src="assets/media/logo.svg" alt="Mahzun Travels Logo" class="logo">
+            </a>
+            <div class="brand-text">
+                <h1>MAHZUN</h1>
+                <p>TRAVEL & TOURISM</p>
+            </div>
+        </div>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#dubai-visa-services">Dubai Visa Services</a></li>
+            <li><a href="#global-visas">Global Visas</a></li>
+            <li><a href="tel:+971509036162">+971509036162</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
 
-    <!-- Aligned Currency Selector Box outside content sections -->
-    <div class="currency-selector-box">
-        <label for="currency">Select Currency:</label>
-        <select id="currency" onchange="changeCurrency()">
-            <option value="aed">AED</option>
-            <option value="inr">Rupees</option>
-            <option value="usd">US Dollars</option>
-        </select>
-    </div>
+<!--     Carousel Section
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-card">
+                <img src="assets/media/admosque.jpg" alt="Admosque">
+                <h3>Abu Dhabi Grand Mosque</h3>
+                <p>Explore the rich heritage of Dubai's Admosque.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="assets/media/future.jpg" alt="Future">
+                <h3>Museum of Future</h3>
+                <p>Experience the futuristic skyline of Dubai.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="assets/media/khalifa.jpg" alt="Khalifa">
+                <h3>Burj Khalifa</h3>
+                <p>Visit the tallest building in the world.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="assets/media/arab.jpg" alt="Arab">
+                <h3>Arab Culture</h3>
+                <p>Immerse yourself in the vibrant Arab culture.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="assets/media/desert.jpg" alt="Desert">
+                <h3>Desert Safari</h3>
+                <p>Adventure awaits in the Arabian desert.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="assets/media/frame.jpg" alt="Dubai Frame">
+                <h3>Dubai Frame</h3>
+                <p>Capture the view of old and new Dubai.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="assets/media/blue.jpg" alt="Blue Waters">
+                <h3>Blue Waters</h3>
+                <p>Discover the modern marvel of Blue Waters.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="assets/media/heritage.jpg" alt="Heritage">
+                <h3>Heritage Village</h3>
+                <p>Walk through Dubai's historical Heritage Village.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="assets/media/atlantis.jpg" alt="Atlantis">
+                <h3>Atlantis</h3>
+                <p>Enjoy the luxury of the iconic Atlantis resort.</p>
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+    </section> -->
+
+    <!-- Dubai Visa Services -->
+    <section class="banner" id="dubai-visa-services">
+        <h2>DUBAI VISA SERVICES</h2>
+    </section>
 
     <section id="visa" class="section">
-        <h2>Tourist Visa</h2>
+        <h2>TOURIST VISA</h2>
         <div class="visa-options">
             <div class="visa-box">
                 <h3>30 Days Visa</h3>
             </div>
             <div class="visa-box">
                 <h3>60 Days Visa</h3>
+                <p>(Single Entry/Multiple Entry)</p>
             </div>
             <div class="visa-box">
                 <h3>90 Days Visa</h3>
+                <p>(Single Entry/Multiple Entry)</p>
             </div>
         </div>
         <div class="visa-info">
-            <p>Visa change by bus available</p>
-            <p>AZA available for visa change (FlyDubai, Kish Air, Qeshm Air)</p>
+            <p><strong>**Insurance included for all Dubai visas</strong></p>
         </div>
     </section>
 
-    <section id="tickets" class="section">
-        <h2>Tickets for All Dubai Attractions</h2>
-        <div class="ticket-options">
-            <div class="ticket-box">
-                <h3>Desert Safari</h3>
-                <p class="price" data-aed="199" data-inr="3980" data-usd="54">
-                    <span class="original-price">199 AED</span>
-                    <span class="discounted-price">99 AED</span>
-                </p>
+    <!-- Visa Change Services -->
+    <section id="visa-change" class="section">
+        <h2>VISA CHANGE SERVICES</h2>
+        <div class="visa-change-options">
+            <div class="small-box">
+                <h3>Visa Change by Bus</h3>
             </div>
-            <div class="ticket-box">
+            <div class="small-box">
+                <h3>A2A Visa Change by Air</h3>
+                <p>(FlyDubai, Kish Air, Qeshm Air, Gulf Air, Wizz Air)</p>
+            </div>
+        </div>
+        <div class="big-box">
+            <h3>Kish Air Full Package</h3>
+            <ul>
+                <li>Two-way open flight tickets</li>
+                <li>3-star hotel</li>
+                <li>Breakfast</li>
+                <li>60 days Dubai visa</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Additional Services Section -->
+    <section id="additional-services" class="section">
+        <h2>ADDITIONAL SERVICES</h2>
+        <div class="additional-options">
+            <div class="service-box">
                 <h3>Air Tickets</h3>
-                <p class="price" data-aed="1200" data-inr="24000" data-usd="327">
-                    <span class="original-price">1200 AED</span>
-                    <span class="discounted-price">1000 AED</span>
-                </p>
             </div>
-            <div class="ticket-box">
-                <h3>Global Visa Assistance</h3>
+            <div class="service-box">
+                <h3>Desert Safari</h3>
             </div>
-        </div>
-    </section>
-
-    <section id="tours" class="section">
-        <h2>City Tours</h2>
-        <div class="tour-options">
-            <div class="tour-box">
-                <h3>Dubai City Tour</h3>
-                <p class="price" data-aed="299" data-inr="5980" data-usd="82">
-                    <span class="original-price">299 AED</span>
-                    <span class="discounted-price">199 AED</span>
-                </p>
-            </div>
-            <div class="tour-box">
+            <div class="service-box">
                 <h3>Abu Dhabi City Tour</h3>
-                <p class="price" data-aed="349" data-inr="6980" data-usd="95">
-                    <span class="original-price">349 AED</span>
-                    <span class="discounted-price">249 AED</span>
-                </p>
+            </div>
+            <div class="service-box">
+                <h3>Dubai City Tour</h3>
+            </div>
+            <div class="service-box">
+                <h3>Car Rental with Driver</h3>
+            </div>
+            <div class="service-box">
+                <h3>All UAE Attractions</h3>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="footer">
-        <div class="social-icons">
-            <a href="https://www.instagram.com"><img src="assets/media/insta.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com"><img src="assets/media/fb.png" alt="Facebook"></a>
+    <!-- Global Visa Services -->
+    <section class="banner">
+        <h2>GLOBAL VISA SERVICES</h2>
+    </section>
+
+    <section id="global-visas" class="section">
+        <h2>TOURIST VISAS</h2>
+        <div class="global-visa-options">
+            <div class="continent-box">
+                <h3>MIDDLE EAST</h3>
+                <ul>
+                    <li>DUBAI</li>
+                    <li>Oman</li>
+                    <li>Qatar</li>
+                    <li>Saudi Arabia</li>
+                    <li>Morocco</li>
+                    <li>Egypt</li>
+                    <li>Turkey</li>
+                </ul>
+            </div>
+            <div class="continent-box">
+                <h3>NORTH AMERICA</h3>
+                <ul>
+                    <li>USA</li>
+                    <li>Canada</li>
+                </ul>
+            </div>
+            <div class="continent-box">
+                <h3>EUROPE</h3>
+                <ul>
+                    <li>Schengen - France (Paris)</li>
+                    <li>Italy (Rome)</li>
+                    <li>Germany</li>
+                    <li>Greece</li>
+                    <li>Spain</li>
+                    <li>Switzerland</li>
+                </ul>
+            </div>
+            <div class="continent-box">
+                <h3>ASIA</h3>
+                <ul>
+                    <li>Singapore</li>
+                    <li>Russia</li>
+                    <li>Azerbaijan</li>
+                    <li>Uzbekistan</li>
+                    <li>Armenia</li>
+                    <li>Georgia</li>
+                    <li>China</li>
+                    <li>Hong Kong</li>
+                    <li>Cambodia</li>
+                    <li>Malaysia</li>
+                    <li>Indonesia</li>
+                    <li>Thailand</li>
+                    <li>Brunei</li>
+                </ul>
+            </div>
+            <div class="continent-box">
+                <h3>AFRICA</h3>
+                <ul>
+                    <li>Kenya</li>
+                    <li>Tanzania</li>
+                    <li>Ethiopia</li>
+                </ul>
+            </div>
         </div>
-        <p><a href="#about">About Us</a> | <a href="#contact">Contact Us</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <p>&copy; 2024 Mahzun Travels. All Rights Reserved.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        function changeCurrency() {
-            const currency = document.getElementById('currency').value;
-            const prices = document.querySelectorAll('.price');
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-card');
+        const totalSlides = slides.length;
 
-            prices.forEach(price => {
-                const originalPriceElement = price.querySelector('.original-price');
-                const discountedPriceElement = price.querySelector('.discounted-price');
-                const aed = price.getAttribute('data-aed');
-                const inr = price.getAttribute('data-inr');
-                const usd = price.getAttribute('data-usd');
-
-                let originalPrice, discountedPrice;
-
-                switch (currency) {
-                    case 'aed':
-                        originalPrice = aed;
-                        discountedPrice = Math.floor(aed * 0.5); // Assuming 50% discount
-                        originalPriceElement.textContent = `${originalPrice} AED`;
-                        discountedPriceElement.textContent = `${discountedPrice} AED`;
-                        break;
-                    case 'inr':
-                        originalPrice = inr;
-                        discountedPrice = Math.floor(inr * 0.5);
-                        originalPriceElement.textContent = `₹${originalPrice}`;
-                        discountedPriceElement.textContent = `₹${discountedPrice}`;
-                        break;
-                    case 'usd':
-                        originalPrice = usd;
-                        discountedPrice = (usd * 0.5).toFixed(2);
-                        originalPriceElement.textContent = `$${originalPrice}`;
-                        discountedPriceElement.textContent = `$${discountedPrice}`;
-                        break;
-                }
-            });
+        function showSlide(n) {
+            slideIndex = (n + totalSlides) % totalSlides;
+            const offset = -slideIndex * 100 / totalSlides;
+            document.querySelector('.carousel-container').style.transform = `translateX(${offset}%)`;
         }
+
+        function nextSlide() {
+            showSlide(slideIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex - 1);
+        }
+
+        setInterval(nextSlide, 3000); // Automatically loop through slides every 3 seconds
     </script>
 </body>
 </html>

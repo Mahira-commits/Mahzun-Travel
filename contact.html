@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mahzun Travels</title>
+    <link rel="stylesheet" href="assets/CSS/contact.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("Tzs7rH5p9xu1g0on9"); // Your actual EmailJS User ID
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand-container">
+            <img src="assets/media/logo.svg" alt="Mahzun Travels Logo" class="logo">
+            <div class="brand-text">
+                <h1>MAHZUN</h1>
+                <p>TRAVEL & TOURISM</p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#dubai-visa-services">Dubai Visa Services</a></li>
+            <li><a href="index.html#global-visas">Global Visas</a></li>
+            <li><a href="tel:+971509036162">+971509036162</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section class="contact-section">
+        <!-- Contact Info Box -->
+        <div class="contact-info-box">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> <a href="mailto:sales@mahzuntravel.com">sales@mahzuntravel.com</a></p>
+            <p><strong>Website:</strong> <a href="https://www.mahzuntravel.com">www.mahzuntravel.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+971509036162">+971509036162</a></p>
+            <p><strong>Location:</strong> Dubai, United Arab Emirates</p>
+        </div>
+
+        <!-- Form Box -->
+        <div class="contact-form-box">
+            <h3>Reach Out to Us!</h3>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+                <label for="query">Your Query</label>
+                <textarea id="query" name="query" placeholder="Write your query here..." rows="6" required></textarea>
+
+                <button type="button" class="submit-btn" onclick="sendEmail()">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Mahzun Travels. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript to send email via EmailJS -->
+    <script type="text/javascript">
+        function sendEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const query = document.getElementById('query').value;
+    
+            const templateParams = {
+                name: name,
+                email: email,
+                phone: phone,
+                query: query
+            };
+    
+            console.log(templateParams); // Debug: See if the parameters are being collected properly
+    
+            emailjs.send('service_h17s2yp', 'template_7ihefwi', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text); // Debug: Success Response
+                    alert('Your message was successfully sent!');
+                    document.getElementById('contact-form').reset(); // Clear form after success
+                }, function(error) {
+                    console.log('FAILED...', error); // Debug: Failed Response
+                    alert('There was an error sending your message. Please try again later.');
+                });
+        }
+    </script>
+    
+</body>
+</html>

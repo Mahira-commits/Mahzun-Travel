@@ -1,33 +1,58 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../media/view.jpg');
+    background-image: url('../media/mahzun.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
     color: white;
+    zoom: 0.9;
 }
 
+/* Navbar Styles */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: black;
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
-.navbar .brand {
+.brand-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.brand-text h1 {
     font-size: 28px;
+    color: #f8cf2c;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
     font-weight: bold;
-    color: white;
-    text-decoration: none;
+}
+
+.brand-text p {
+    font-size: 16px;
+    color: #f8cf2c;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-right: 2px;;
     display: flex;
     align-items: center;
 }
@@ -48,35 +73,104 @@ body {
     border-radius: 4px;
 }
 
-/* Currency Selector Styling */
-.currency-selector-box {
-    position: absolute;
-    top: 120px;
-    right: 20px;
+/* Carousel Styles */
+.carousel-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+    flex: 0 0 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
     background-color: white;
-    padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
 }
 
-.currency-selector-box label {
-    color: black;
-    font-size: 16px;
-    margin-right: 5px;
+.carousel-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.currency-selector-box select {
-    padding: 5px;
+.carousel-card h3 {
+    color: #f8cf2c;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.carousel-card p {
+    color: #555;
     font-size: 16px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
-    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 100;
 }
 
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Circular loop transition */
+.carousel-container {
+    display: flex;
+    width: max-content;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+    width: 300px; /* Adjusted width for cards */
+}
+
+/* Banner Styling */
+.banner {
+    background-color: #f8cf2c;
+    text-align: center;
+    padding: 15px 0;
+    margin: 20px 0;
+}
+
+.banner h2 {
+    color: black;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Section Styling */
 .section {
     padding: 40px 20px;
     margin: 20px auto;
     max-width: 1200px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     color: #333;
@@ -87,93 +181,163 @@ body {
     text-align: center;
     color: #333;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
-.visa-options,
-.ticket-options,
-.tour-options {
+/* Tourist Visa */
+.visa-options {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.visa-box,
-.ticket-box,
-.tour-box {
-    background-color: rgba(240, 240, 240, 0.95);
+.visa-box {
+    background-color: rgba(240, 240, 240, 0.5);
     padding: 25px;
     border-radius: 8px;
     text-align: center;
-    flex: 1;
+    flex: 1 1 calc(33.33% - 40px);
     margin: 0 10px;
     transition: transform 0.3s ease;
     max-width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
-.visa-box:hover,
-.ticket-box:hover,
-.tour-box:hover {
+.visa-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.visa-box h3,
-.ticket-box h3,
-.tour-box h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+.visa-info p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
 }
 
-.dropdown-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.6s ease;
-    background-color: rgba(240, 240, 240, 0.95);
-    padding: 0 20px;
+/* Visa Change Services */
+.visa-change-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.small-box {
+    background-color: rgba(240, 240, 240, 0.5);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    margin: 0;
+    transition: transform 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    border-radius: 0 0 8px 8px;
+    min-width: 45%;
+}
+
+/* Updated styling for the big box */
+.big-box {
+    background-color: rgba(211, 211, 211, 0.8); /* Darker grey color */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 100%;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.big-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
     text-align: center;
 }
 
-.dropdown-content.open {
-    max-height: 200px; /* Adjust based on content */
+.big-box ul li {
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
-.discounted-price {
-    color: #ff4500;
-    font-weight: bold;
-    font-size: 24px;
+.small-box:hover,
+.big-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.original-price {
-    text-decoration: line-through;
-    color: #888;
-    margin-right: 10px;
+/* Global Visa Services */
+.global-visa-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.continent-box {
+    background-color: rgba(240, 240, 240, 0.5);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.continent-box h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.continent-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.continent-box ul li {
     font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.continent-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Services */
+.additional-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-box {
+    background-color: rgba(240, 240, 240, 0.5);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 40px);
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer styling */
 .footer {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 20px 20px;
+    padding: 30px 20px;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.footer .social-icons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px; /* Reduced the bottom margin */
-}
-
-.footer .social-icons img {
-    height: 40px;
-    margin: 0 10px; /* Reduced space between icons */
 }
 
 .footer a {
@@ -184,14 +348,6 @@ body {
 }
 
 .footer p {
-    margin: 5px 0; /* Reduced line spacing */
+    margin: 5px 0;
     font-size: 18px;
-}
-
-.visa-info {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 18px;
-    color: #555;
-    line-height: 1.4; /* Reduced line spacing */
 }
