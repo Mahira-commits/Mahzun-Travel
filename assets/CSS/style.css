@@ -52,7 +52,7 @@ body {
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding-right: 2px;
+    padding-right: 2px;;
     display: flex;
     align-items: center;
 }
@@ -71,84 +71,6 @@ body {
 .navbar a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
-}
-
-/* Carousel Styles */
-.carousel-section {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-
-.carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-card {
-    flex: 0 0 33.33%;
-    box-sizing: border-box;
-    padding: 15px;
-    text-align: center;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin: 0 10px;
-}
-
-.carousel-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.carousel-card h3 {
-    color: #f8cf2c;
-    margin-top: 10px;
-    font-size: 20px;
-}
-
-.carousel-card p {
-    color: #555;
-    font-size: 16px;
-}
-
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 100;
-}
-
-.carousel-control.prev {
-    left: 10px;
-}
-
-.carousel-control.next {
-    right: 10px;
-}
-
-.carousel-control:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Circular loop transition */
-.carousel-container {
-    display: flex;
-    width: max-content;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-card {
-    width: 300px; /* Adjusted width for cards */
 }
 
 /* Banner Styling */
@@ -184,6 +106,151 @@ body {
     text-transform: uppercase;
 }
 
+/* Tourist Visa */
+.visa-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.visa-box {
+    background-color: rgba(240, 240, 240, 0.5);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 40px);
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.visa-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.visa-info p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Visa Change Services */
+.visa-change-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.small-box {
+    background-color: rgba(240, 240, 240, 0.5);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    margin: 0;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    min-width: 45%;
+}
+
+/* Updated styling for the big box */
+.big-box {
+    background-color: rgba(211, 211, 211, 0.8); /* Darker grey color */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 100%;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.big-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.big-box ul li {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.small-box:hover,
+.big-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Global Visa Services */
+.global-visa-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.continent-box {
+    background-color: rgba(240, 240, 240, 0.5);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.continent-box h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.continent-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.continent-box ul li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.continent-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Services */
+.additional-options {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-box {
+    background-color: rgba(240, 240, 240, 0.5);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 40px);
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
 /* Footer styling */
 .footer {
     background-color: rgba(0, 0, 0, 0.7);
@@ -205,4 +272,11 @@ body {
 .footer p {
     margin: 5px 0;
     font-size: 18px;
+}
+
+/*Carousel Styling*/
+
+.carousel-inner img {
+    max-height: 500px; /* Adjust the height as per your requirement */
+    object-fit: cover; /* Ensures the image scales without distortion */
 }
